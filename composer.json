@@ -1,14 +1,16 @@
 {
     "name": "double-null/orakul",
     "description": "Admin Bundle",
+    "license": "proprietary",
     "require": {
+        "php": ">=7.0",
         "mikecao/flight": "^2.0",
         "smarty/smarty": "^4.1",
         "catfan/medoo": "^2.1"
     },
     "autoload": {
         "psr-4": {
-            "DoubleNull\\Orakul\\": "src/"
+            "Orakul\\": "src/"
         }
     }
 }
