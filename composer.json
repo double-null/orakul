@@ -1,0 +1,14 @@
+{
+    "name": "double-null/orakul",
+    "description": "Admin Bundle",
+    "require": {
+        "mikecao/flight": "^2.0",
+        "smarty/smarty": "^4.1",
+        "catfan/medoo": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "DoubleNull\\Orakul\\": "src/"
+        }
+    }
+}
