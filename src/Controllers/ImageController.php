@@ -2,6 +2,7 @@
 
 namespace Orakul\Controllers;
 
+use Orakul\Services\ImageLoader;
 use Flight;
 
 class ImageController

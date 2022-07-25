@@ -2,7 +2,6 @@
     "name": "double-null/orakul",
     "description": "Admin Bundle",
     "license": "proprietary",
-    "minimum-stability": "dev",
     "require": {
         "php": ">=7.0",
         "mikecao/flight": "^2.0",

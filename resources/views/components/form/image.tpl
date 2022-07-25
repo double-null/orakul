@@ -8,7 +8,9 @@
     <div class="col-md-2">
         <div class="form-group">
             <div class="py-5">
-                <a class="btn btn-info load-image" style="margin-top:23px;">Загрузить</a>
+                <a class="btn btn-info load-image" style="margin-top:23px;" data-name="{$name}">
+                    Загрузить
+                </a>
             </div>
         </div>
     </div>

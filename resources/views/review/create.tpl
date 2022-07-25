@@ -1,4 +1,4 @@
-{extends file="admin/template.tpl"}
+{extends file="file:[orakul]template.tpl"}
 
 {block name="title"}Добавить отзыв{/block}
 

@@ -1,4 +1,4 @@
-{extends file="file:[1]template.tpl"}
+{extends file="file:[orakul]template.tpl"}
 
 {block name="title"}Список отзывов{/block}
 
