@@ -27,7 +27,6 @@
 
 </head>
 <body>
-
 <div class="wrapper">
     <div class="sidebar" data-color="gray" data-image="/assets/admin/img/sidebar-5.jpg">
         <div class="sidebar-wrapper">
@@ -96,7 +95,12 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">{block name="title"}{/block}</h4>
+                                <h4 class="title">{block name="title"}{/block}
+                                    {if $creating == 1}
+                                        <a href="/admin/{$module}/create/"
+                                            class="btn btn-info btn-fill">Добавить</a>
+                                    {/if}
+                                </h4>
                             </div>
                             <div class="content">
                                 {block name="content"}{/block}

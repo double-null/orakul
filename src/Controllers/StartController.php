@@ -8,8 +8,9 @@ class StartController
     public function init()
     {
         $url = Flight::request()->url;
-        $module = array_diff(explode('/', $url),[''])[2];
-        Flight::view()->assign('module', $module);
+        $sections = array_diff(explode('/', $url),['']);
+        Flight::view()->assign('module', $sections[2]);
+        Flight::view()->assign('action', $sections[3] ?? 'index');
         return true;
     }
 }

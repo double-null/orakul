@@ -17,7 +17,7 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-        <p class="loading-status"></p>
-        <input id="hidden-{$name}" type="hidden" name="{$name}">
+        <p class="loading-status">{$value}</p>
+        <input id="hidden-{$name}" type="hidden" name="{$name}" value="{$value}">
     </div>
 </div>
