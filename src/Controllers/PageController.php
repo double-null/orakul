@@ -2,20 +2,22 @@
 
 namespace Orakul\Controllers;
 
-use Orakul\Models\Page;
 use Flight;
+use Orakul\Models\Page;
+use Orakul\Transformers\PageTransformer;
 
 class PageController
 {
     public function index()
     {
-        Flight::view()->assign('pages', Page::getAll());
-        Flight::view()->display('pages/index.tpl');
+        $pages = PageTransformer::addBlockLink(Page::getAll());
+        Flight::view()->assign('pages', $pages);
+        Flight::view()->display('file:[orakul]pages/index.tpl');
     }
 
     public function create()
     {
-        Flight::view()->display('pages/form.tpl');
+        Flight::view()->display('file:[orakul]pages/form.tpl');
     }
 
     public function store()
@@ -29,7 +31,7 @@ class PageController
     {
         $page = Page::getOneById($id);
         Flight::view()->assign('page', $page);
-        Flight::view()->display('pages/form.tpl');
+        Flight::view()->display('file:[orakul]pages/form.tpl');
     }
 
     public function update($id)
