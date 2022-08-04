@@ -9,6 +9,8 @@
 
         {include '../components/form/text.tpl' label='Название услуги' name='title' value="{$service.title}"}
 
+        {include '../components/form/text.tpl' label='Тэг' name='tag' value="{$service.tag}"}
+
         {include '../components/form/textarea.tpl' label='Контент' name='content' value="{$service.content}"}
 
         {include '../components/form/image.tpl' label='Изображение' name='image' value="{$service.image}"}
