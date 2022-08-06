@@ -98,7 +98,7 @@
                             <div class="header">
                                 <h4 class="title">{block name="title"}{/block}
                                     {if $creating == 1}
-                                        <a href="/admin/{$module}/create/"
+                                        <a href="/admin/{$module}/create/{if !empty($params)}{$params}{/if}"
                                             class="btn btn-info btn-fill">Добавить</a>
                                     {/if}
                                 </h4>
@@ -126,7 +126,7 @@
                     </ul>
                 </nav>
                 <p class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+
                 </p>
             </div>
         </footer>

@@ -39,4 +39,18 @@ Flight::route('/admin/reviews/update/@id', ['Orakul\Controllers\ReviewController
 Flight::route('/admin/reviews/destroy/@id', ['Orakul\Controllers\ReviewController', 'destroy']);
 //----------------------------------------------------------------------------------------------------------------------
 
+Flight::route('/admin/blocks', ['Orakul\Controllers\BlockController', 'index']);
+
+Flight::route('/admin/blocks/create', ['Orakul\Controllers\BlockController', 'create']);
+
+Flight::route('/admin/blocks/store', ['Orakul\Controllers\BlockController', 'store']);
+
+//Flight::route('/admin/blocks/edit/@id', ['Orakul\Controllers\BlockReviewController', 'edit']);
+
+//Flight::route('/admin/blocks/update/@id', ['Orakul\Controllers\BlockReviewController', 'update']);
+
+Flight::route('/admin/blocks/destroy/@id', ['Orakul\Controllers\BlockController', 'destroy']);
+
+//----------------------------------------------------------------------------------------------------------------------
+
 Flight::route('/admin/upload', ['Orakul\Controllers\ImageController', 'upload']);

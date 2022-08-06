@@ -29,9 +29,11 @@ class Model
         Flight::db()->update(static::$table, $data, ['id' => $id]);
     }
 
-    public static function save()
+    public static function save($data = null)
     {
-        $data = Flight::request()->data->getData();
+        if (!$data) {
+            $data = Flight::request()->data->getData();
+        }
         Flight::db()->insert(static::$table, $data);
         return Flight::db()->id();
     }
