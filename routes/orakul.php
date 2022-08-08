@@ -1,6 +1,11 @@
 <?php
 
+Flight::route('/orakul/@keyOne/@keyTwo', ['Orakul\Controllers\AuthController', 'login']);
+
 Flight::route('/admin/*', ['Orakul\Controllers\StartController', 'init']);
+
+Flight::route('/admin/logout', ['Orakul\Controllers\AuthController', 'logout']);
+
 //----------------------------------------------------------------------------------------------------------------------
 Flight::route('/admin/pages', ['Orakul\Controllers\PageController', 'index']);
 
