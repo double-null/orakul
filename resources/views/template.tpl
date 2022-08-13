@@ -40,19 +40,19 @@
                         <i class="pe-7s-note2"></i><p>Страницы</p>
                     </a>
                 </li>
+                <li {if $module == 'categories'}class="active"{/if}>
+                    <a href="/admin/categories/">
+                        <i class="pe-7s-diamond"></i><p>Категории</p>
+                    </a>
+                </li>
                 <li {if $module == 'services'}class="active"{/if}>
-                    <a href="/admin/services/">
-                        <i class="pe-7s-diamond"></i><p>Услуги</p>
+                    <a href="/admin/products/">
+                        <i class="pe-7s-diamond"></i><p>Товары (Услуги)</p>
                     </a>
                 </li>
                 <li {if $module == 'reviews'}class="active"{/if}>
                     <a href="/admin/reviews/">
                         <i class="pe-7s-comment"></i><p>Отзывы</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="/admin/pages/">
-                        <i class="pe-7s-ticket"></i><p>Тэги</p>
                     </a>
                 </li>
                 <li>
