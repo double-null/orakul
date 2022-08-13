@@ -12,6 +12,7 @@ $modules = [
     'pages' => 'Orakul\Controllers\PageController',
     'categories' => 'Orakul\Controllers\CategoryController',
     'products' => 'Orakul\Controllers\ProductController',
+    'portfolio' => 'Orakul\Controllers\PortfolioController',
     'reviews' => 'Orakul\Controllers\ReviewController',
     'blocks' => 'Orakul\Controllers\BlockController',
 ];

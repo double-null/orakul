@@ -50,6 +50,11 @@
                         <i class="pe-7s-diamond"></i><p>Товары (Услуги)</p>
                     </a>
                 </li>
+                <li {if $module == 'portfolio'}class="active"{/if}>
+                    <a href="/admin/portfolio/">
+                        <i class="pe-7s-portfolio"></i><p>Портфолио</p>
+                    </a>
+                </li>
                 <li {if $module == 'reviews'}class="active"{/if}>
                     <a href="/admin/reviews/">
                         <i class="pe-7s-comment"></i><p>Отзывы</p>
@@ -74,7 +79,6 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -115,16 +119,8 @@
 
         <footer class="footer">
             <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
+                <nav class="pull-left"><ul><li></li></ul></nav>
 
-                    </ul>
-                </nav>
                 <p class="copyright pull-right">
 
                 </p>
