@@ -9,7 +9,7 @@
         {include '../components/form/select.tpl' label='Категория' name='parent' items=$categories column='title'
         value="{$category.parent}"}
 
-        {include '../components/form/text.tpl' label='Заголовок страницы' name='title' value=$category.title}
+        {include '../components/form/text.tpl' label='Заголовок' name='title' value=$category.title}
 
         {include '../components/form/text.tpl' label='Тэг' name='slug' value=$category.slug}
 

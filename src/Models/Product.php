@@ -24,4 +24,11 @@ class Product extends Model
             ]
         );
     }
+
+    public static function findAllByCategory($category)
+    {
+        return Flight::db()->select(self::$table, '*', [
+            'category_id' => $category,
+        ]);
+    }
 }
