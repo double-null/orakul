@@ -43,7 +43,6 @@ class ProductController
 
     public function destroy($id)
     {
-        Product::deleteById($id);
-        Flight::redirect('/admin/products/');
+        Flight::json(['success' => Product::deleteById($id)]);
     }
 }

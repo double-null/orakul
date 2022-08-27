@@ -41,7 +41,6 @@ class SettingController
 
     public function destroy($id)
     {
-        Settings::deleteById($id);
-        Flight::redirect('/admin/settings/');
+        Flight::json(['success' => Settings::deleteById($id)]);
     }
 }

@@ -47,7 +47,6 @@ class BlockController
 
     public function destroy($id)
     {
-        Block::deleteById($id);
-        Flight::redirect(Flight::request()->referrer);
+        Flight::json(['success' => Block::deleteById($id)]);
     }
 }

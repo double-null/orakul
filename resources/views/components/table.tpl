@@ -4,7 +4,7 @@
         <p class="category"></p>
     </div>
     <div class="content table-responsive table-full-width">
-        <table class="table table-hover table-striped">
+        <table id="entity-table" class="table table-hover table-striped" data-destroy="0" data-entity="{$module}">
             <thead>
                 <tr>
                     {foreach $fields as $field}<th>{$field}</th>{/foreach}
@@ -12,14 +12,14 @@
                 </tr>
             </thead>
             {foreach $items as $item}
-                <tr>
+                <tr class="item-{$item.id}">
                     {foreach $item as $field}
                         <td>{$field}</td>
                     {/foreach}
                     {if $actions == 1}
                         <th>
-                            <a href="/admin/{$module}/edit/{$item.id}/">[ред]</a>
-                            <a href="/admin/{$module}/destroy/{$item.id}/">[del]</a>
+                            <a href="/admin/{$module}/edit/{$item.id}/"><i class="pe-7s-pen excellent-icon"></i></a>
+                            <a data-id="{$item.id}" class="del-item"><i class="pe-7s-junk excellent-icon"></i></a>
                         </th>
                     {/if}
                 </tr>

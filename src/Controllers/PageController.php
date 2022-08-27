@@ -42,7 +42,6 @@ class PageController
 
     public function destroy($id)
     {
-        Page::deleteById($id);
-        Flight::redirect('/admin/pages/');
+        Flight::json(['success' => Page::deleteById($id)]);
     }
 }

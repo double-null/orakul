@@ -10,12 +10,8 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
-
     <!-- Bootstrap core CSS     -->
     <link href="/assets/admin/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Animation library for notifications   -->
-    <link href="/assets/admin/css/animate.min.css" rel="stylesheet"/>
 
     <!--  Light Bootstrap Table core CSS    -->
     <link href="/assets/admin/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
@@ -114,20 +110,9 @@
 <script src="/assets/admin/js/jquery.3.2.1.min.js" type="text/javascript"></script>
 <script src="/assets/admin/js/bootstrap.min.js" type="text/javascript"></script>
 
-<!--  Charts Plugin -->
-<script src="/assets/admin/js/chartist.min.js"></script>
-
-<!--  Notifications Plugin    -->
-<script src="/assets/admin/js/bootstrap-notify.js"></script>
-
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-
 <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 <script src="/assets/admin/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
-
-<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-<script src="/assets/admin/js/demo.js"></script>
+<script src="/assets/admin/js/sweetalert.min.js?d=5"></script>
 
 <script src="/assets/admin/js/custom.js"></script>
 

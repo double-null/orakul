@@ -13,6 +13,7 @@
         {include '../components/form/text.tpl' label='Значение' name='value' value=$settings.value}
 
         {include '../components/form/button.tpl' text={($action == 'create') ? 'Добавить' : 'Редактировать'}}
+
     </form>
 
 {/block}

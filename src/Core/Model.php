@@ -20,7 +20,8 @@ class Model
 
     public static function deleteById($id)
     {
-        Flight::db()->delete(static::$table, ['id' => $id]);
+        $data = Flight::db()->delete(static::$table, ['id' => $id]);
+        return (bool)$data->rowCount();
     }
 
     public static function updateById($id, $data = null)

@@ -42,7 +42,6 @@ class CategoryController
 
     public function destroy($id)
     {
-        Category::deleteById($id);
-        Flight::redirect('/admin/categories/');
+        Flight::json(['success' => Category::deleteById($id)]);
     }
 }

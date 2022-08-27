@@ -40,7 +40,6 @@ class PortfolioController
 
     public function destroy($id)
     {
-        Portfolio::deleteById($id);
-        Flight::redirect('/admin/portfolio/');
+        Flight::json(['success' => Portfolio::deleteById($id)]);
     }
 }

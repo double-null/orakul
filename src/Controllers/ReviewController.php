@@ -40,7 +40,6 @@ class ReviewController
 
     public function destroy($id)
     {
-        Review::deleteById($id);
-        Flight::redirect('/admin/reviews/');
+        Flight::json(['success' => Review::deleteById($id)]);
     }
 }
