@@ -11,6 +11,15 @@ class Category extends Model
 
     public static function findOneBySlug($slug)
     {
-        return Flight::db()->get(self::$table, '*', ['slug' => $slug]);
+        $category = Flight::db()->get(self::$table, '*', ['slug' => $slug]);
+        $category['childs'] = Flight::db()->select(self::$table, '*', [
+            'parent' => $category['id'],
+        ]);
+        if ($category['parent']) {
+            $category['parent'] = Flight::db()->get(self::$table, '*', [
+                'id' => $category['parent'],
+            ]);
+        }
+        return $category;
     }
 }
