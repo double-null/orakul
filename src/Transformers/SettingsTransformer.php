@@ -2,7 +2,7 @@
 
 namespace Orakul\Transformers;
 
-class ContactTransformer
+class SettingsTransformer
 {
     public static function assoc($data)
     {

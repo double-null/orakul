@@ -15,6 +15,7 @@ $modules = [
     'portfolio' => 'Orakul\Controllers\PortfolioController',
     'reviews' => 'Orakul\Controllers\ReviewController',
     'blocks' => 'Orakul\Controllers\BlockController',
+    'settings' => 'Orakul\Controllers\SettingController',
 ];
 
 foreach ($modules as $module => $controller) {

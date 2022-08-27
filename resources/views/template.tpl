@@ -35,36 +35,13 @@
                 <a href="/" class="simple-text">PROJECT NAME</a>
             </div>
             <ul class="nav">
-                <li {if $module == 'pages'}class="active"{/if}>
-                    <a href="/admin/pages/">
-                        <i class="pe-7s-note2"></i><p>Страницы</p>
-                    </a>
-                </li>
-                <li {if $module == 'categories'}class="active"{/if}>
-                    <a href="/admin/categories/">
-                        <i class="pe-7s-diamond"></i><p>Категории</p>
-                    </a>
-                </li>
-                <li {if $module == 'services'}class="active"{/if}>
-                    <a href="/admin/products/">
-                        <i class="pe-7s-diamond"></i><p>Товары (Услуги)</p>
-                    </a>
-                </li>
-                <li {if $module == 'portfolio'}class="active"{/if}>
-                    <a href="/admin/portfolio/">
-                        <i class="pe-7s-portfolio"></i><p>Портфолио</p>
-                    </a>
-                </li>
-                <li {if $module == 'reviews'}class="active"{/if}>
-                    <a href="/admin/reviews/">
-                        <i class="pe-7s-comment"></i><p>Отзывы</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="/admin/pages/">
-                        <i class="pe-7s-config"></i><p>Настройки</p>
-                    </a>
-                </li>
+                {foreach $menu as $point}
+                    <li {if $module == $point.name}class="active"{/if}>
+                        <a href="/admin/{$point.name}/">
+                            <i class="{$point.icon}"></i><p>{$point.title}</p>
+                        </a>
+                    </li>
+                {/foreach}
             </ul>
         </div>
     </div>
