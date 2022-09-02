@@ -21,10 +21,10 @@ class CategoryTree
             if ($parent) {
                 $output[$parent]['childs'][] = $category;
             } else {
-                // категории 0 уровня
                 $childs = $output[$category['id']]['childs'] ?? [];
                 $output[$category['id']] = $category;
                 $output[$category['id']]['childs'] = $childs;
+                $output[$category['id']]['parent'] = 0;
             }
         }
         return $output;

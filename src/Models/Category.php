@@ -22,4 +22,12 @@ class Category extends Model
         }
         return $category;
     }
+    /*
+    public static function getAllSortParent()
+    {
+        $sql = "SELECT * FROM {self::$table}";
+        return Flight::db()->query(
+        )->fetchAll();
+    }
+    */
 }
