@@ -10,6 +10,7 @@ Flight::route('/admin/upload', ['Orakul\Controllers\ImageController', 'upload'])
 
 $modules = [
     'pages' => 'Orakul\Controllers\PageController',
+    'slides' => 'Orakul\Controllers\SlideController',
     'categories' => 'Orakul\Controllers\CategoryController',
     'products' => 'Orakul\Controllers\ProductController',
     'portfolio' => 'Orakul\Controllers\PortfolioController',

@@ -10,7 +10,7 @@ class PageController
 {
     public function index()
     {
-        $pages = PageTransformer::addBlockLink(Page::getAll());
+        $pages = PageTransformer::format(Page::getAll());
         Flight::view()->assign('pages', $pages);
         Flight::view()->display('file:[orakul]pages/index.tpl');
     }

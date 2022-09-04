@@ -4,16 +4,26 @@ namespace Orakul\Transformers;
 
 class PageTransformer
 {
-    public static function addBlockLink($data)
+    public static function format($data)
     {
         $out = [];
         foreach ($data as $item)
         {
-            $page = $item;
+            $icon = "<i class='pe-7s-photo-gallery excellent-icon'></i>";
+            $link = "/admin/slides/?page={$item['id']}";
+            $sliderCode = "<a href=\"{$link}\">{$icon}</a>";
+
             $icon = "<i class='pe-7s-display2 excellent-icon'></i>";
             $link = "/admin/blocks/?page={$page['id']}";
-            $page['block'] = "<a href=\"{$link}\">{$icon}</a>";
-            $out[] = $page;
+            $blockCode = "<a href=\"{$link}\">{$icon}</a>";
+
+            $out[] = [
+                'id' => $item['id'],
+                'slug' => $item['slug'],
+                'title' => $item['title'],
+                'slider' => $sliderCode,
+                'blocks' => $blockCode,
+            ];
         }
         return $out;
     }
