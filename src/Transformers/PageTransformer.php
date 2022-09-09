@@ -13,8 +13,8 @@ class PageTransformer
             $link = "/admin/slides/?page={$item['id']}";
             $sliderCode = "<a href=\"{$link}\">{$icon}</a>";
 
-            $icon = "<i class='pe-7s-display2 excellent-icon'></i>";
-            $link = "/admin/blocks/?page={$page['id']}";
+            $icon = "<i class='pe-7s-plugin excellent-icon'></i>";
+            $link = "/admin/blocks/?page={$item['id']}";
             $blockCode = "<a href=\"{$link}\">{$icon}</a>";
 
             $out[] = [
