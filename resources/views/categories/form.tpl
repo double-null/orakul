@@ -7,7 +7,7 @@
     <form method="POST" action="/admin/categories/{($action == 'create') ? 'store' : "update/{$category.id}"}/">
 
         {include '../components/form/select.tpl' label='Категория' name='parent' items=$categories column='title'
-        value="{$category.parent}"}
+        value="{($category.parent) ? $category.parent : $current_category}"}
 
         {include '../components/form/text.tpl' label='Заголовок' name='title' value=$category.title}
 

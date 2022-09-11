@@ -66,10 +66,11 @@
                 </div>
             </div>
         </nav>
-
+        
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
+                    {if $action !== 'show'}
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
@@ -85,9 +86,14 @@
                             </div>
                         </div>
                     </div>
+                    {else}
+                        {block name="content"}{/block}
+                    {/if}
                 </div>
+
             </div>
         </div>
+
 
 
         <footer class="footer">

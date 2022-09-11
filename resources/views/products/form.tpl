@@ -4,9 +4,8 @@
 
 {block name="content"}
     <form method="POST" action="/admin/products/{($action == 'create') ? 'store' : "update/{$product.id}" }/">
-
         {include '../components/form/select.tpl' label='Категория' name='category_id' items=$categories column='title'
-            value="{$product.category_id}"}
+            value="{($product.category_id) ? $product.category_id : $current_category}"}
 
         {include '../components/form/text.tpl' label='Название услуги (товара)' name='title' value="{$product.title}"}
 

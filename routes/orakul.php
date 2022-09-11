@@ -33,3 +33,5 @@ foreach ($modules as $module => $controller) {
 
     Flight::route("/admin/$module/destroy/@id", [$controller, 'destroy']);
 }
+
+Flight::route("/admin/categories/show/@id", [$modules['categories'], 'show']);
