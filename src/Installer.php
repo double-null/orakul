@@ -29,6 +29,7 @@ class Installer
                 "content" => ["TEXT(1000)", "NULL"],
                 "photo" => ["VARCHAR(36)", "NULL"],
                 "price" => ["INT", "NOT NULL"],
+                "price_mark" => ["VARCHAR(80)", "NULL"],
             ],
             ["ENGINE" => "InnoDB"]
         );

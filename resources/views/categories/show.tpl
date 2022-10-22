@@ -27,7 +27,7 @@
                 </h4>
             </div>
             <div class="content">
-                {$fields = ['ID', 'Категория', 'Название', 'Контент', 'Изображение', 'Цена'] }
+                {$fields = ['ID', 'Категория', 'Название', 'Цена'] }
                 {include '../components/table.tpl' fields=$fields items=$products actions=1 module='products'}
             </div>
         </div>

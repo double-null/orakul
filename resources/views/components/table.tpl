@@ -4,7 +4,7 @@
         <p class="category"></p>
     </div>
     <div class="content table-responsive table-full-width">
-        <table id="entity-table" class="table table-hover table-striped" data-destroy="0" data-entity="{$module}">
+        <table class="table table-hover table-striped" data-entity="{$module}">
             <thead>
                 <tr>
                     {foreach $fields as $field}<th>{$field}</th>{/foreach}
@@ -12,7 +12,7 @@
                 </tr>
             </thead>
             {foreach $items as $item}
-                <tr class="item-{$item.id}">
+                <tr class="{$module}-item-{$item.id}">
                     {foreach $item as $field => $value}
                         {if $field != 'actions'}
                             <td>{$value}</td>

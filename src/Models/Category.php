@@ -29,4 +29,16 @@ class Category extends Model
             'parent' => $parent
         ]);
     }
+
+    public function search($searchText)
+    {
+        return Flight::db()->select(self::$table, '*', [
+            'title[~]' => $searchText,
+        ]);
+    }
+
+    public function hasSlug($slug)
+    {
+        return Flight::db()->has(self::$table, ['slug' => $slug]);
+    }
 }

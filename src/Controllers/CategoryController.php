@@ -5,6 +5,8 @@ namespace Orakul\Controllers;
 use Orakul\Models\Category;
 use Orakul\Models\Product;
 use Orakul\Transformers\CategoryTransformer;
+use Orakul\Transformers\PtTransformer;
+use Orakul\Validators\CategoryValidator;
 use Flight;
 
 class CategoryController
@@ -21,7 +23,9 @@ class CategoryController
         $category = Category::getOneById($id);
         $categories = Category::getAllChild($category['id']);
         $formattedCategories = CategoryTransformer::format($categories);
-        $products = Product::findAllByCategory($category['id']);
+        $products = PtTransformer::format(
+            Product::findAllByCategory($category['id'])
+        );
         Flight::view()->assign('category', $category);
         Flight::view()->assign('child_categories', $formattedCategories);
         Flight::view()->assign('products', $products);
@@ -38,10 +42,15 @@ class CategoryController
 
     public function store()
     {
-        if (Category::save()) {
-            $data = Flight::request()->data->getData();
-            $params = $data['parent'] ? "show/{$data['parent']}/" : '';
-            Flight::redirect("/admin/categories/$params");
+        $data = Flight::request()->data->getData();
+        $valid = new CategoryValidator();
+        if ($valid->run($data)) {
+            if (Category::save($data)) {
+                $params = $data['parent'] ? "show/{$data['parent']}/" : '';
+                Flight::redirect("/admin/categories/$params");
+            }
+        } else {
+            var_dump($valid->first());
         }
     }
 

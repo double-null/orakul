@@ -15,6 +15,8 @@
 
         {include '../components/form/text.tpl' label='Цена' name='price' value="{$product.price}"}
 
+        {include '../components/form/text.tpl' label='Метка к цене' name='price_mark' value="{$product.price_mark}"}
+
         {include '../components/form/button.tpl' text=($action == 'create') ? 'Добавить' : 'Редактировать'}
     </form>
 {/block}

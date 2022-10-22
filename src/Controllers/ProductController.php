@@ -4,6 +4,7 @@ namespace Orakul\Controllers;
 
 use Orakul\Models\Product;
 use Orakul\Models\Category;
+use Orakul\Transformers\PtTransformer;
 use Flight;
 
 class ProductController
@@ -11,7 +12,8 @@ class ProductController
     public function index()
     {
         $data = Flight::request()->query->getData();
-        Flight::view()->assign('products', Product::getAllWithCategory());
+        $products = PtTransformer::format(Product::getAllWithCategory());
+        Flight::view()->assign('products', $products);
         Flight::view()->display('file:[orakul]products/index.tpl');
     }
 
