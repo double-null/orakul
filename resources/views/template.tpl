@@ -28,7 +28,7 @@
     <div class="sidebar" data-color="gray" data-image="/assets/admin/img/sidebar-5.jpg">
         <div class="sidebar-wrapper">
             <div class="logo">
-                <a href="/" class="simple-text">PROJECT NAME</a>
+                <a href="/" class="simple-text">{$smarty.server.HTTP_HOST}</a>
             </div>
             <ul class="nav">
                 {foreach $menu as $point}
